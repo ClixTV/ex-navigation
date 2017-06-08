@@ -30,7 +30,7 @@ export default class ExNavigationTabBar extends React.Component {
   render() {
     const height = this.props.height || DEFAULT_TAB_BAR_HEIGHT;
     let isTranslucent = this.props.translucent;
-    let backgroundColor = isTranslucent ? 'rgba(255,255,255,0.5)' : '#fefefe';
+      let backgroundColor = (this.props.backgroundColor) ? this.props.backgroundColor : (isTranslucent ? 'rgba(255,255,255,0.5)' : '#fefefe');
 
     return (
       <View style={[styles.container, { height }]}>
